@@ -50,7 +50,6 @@ int main(){
 	}
 	
 	//save array to text file
-	
 	ofstream outfile("f:\\students.dat",ios::out);
 	
 	for(i = 0; i < 4; i++){
@@ -70,7 +69,6 @@ int main(){
 	}
 	
 	//print array
-	
 	for(i = 0; i < 4; i++){
 		cout << s[i].name << endl;
 		cout << "test scores " << s[i].t1 << " " << s[i].t2 << " " << s[i].t3;
