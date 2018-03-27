@@ -1,56 +1,63 @@
-#include<stdio.h>
-
-//REVIEW OF PARAMETER PASSING BY VALUE AND REFERENCE
-
-//prototype
-void load(int *, int *, int *); //this function takes 3 user input integers and loads them as variables
-void calc(int, int, int, int *, float *); //this function takes the 3 user input integers and calculates the sum and avg
-void print(int, int, int, int, float); //this function prints the 3 user input integers and calculations for sum and avg
-
-void load(int *a, int *b, int *c)
-{
-	
-}
-
-void calc(int a, int b, int c, int *sum, float *avg)
-{
-	
-}
-
-void print(int a, int b, int c, int sum, float avg)
-{
-	
-}
-
-//PARAMETER/ARGUMENT
+//class10.cpp
 
 /*
-Value passed to a function so the function can perform its task
+a
+t1 : 10
+t2 : 20
+t3 : 30
+
+b
+t1 : 20
+t2 : 30
+t3 : 40
+
+sum
+t1 : 30
+t2 : 50
+t3 : 70
+
+main
+sum.add(a,b);
 */
 
-//SWAPPING & TEMPORARY VARIABLES
+class student{
+	public:
+		student(int = 0, int = 0, int = 0);
+		~student();
+		void getData(int,int,int);
+		void printData();
+		void add(student,student);
+	private:
+		int t1,t2,t3;
+};
 
-a = 20;
-b = 10; //swap the two
-
-t = a;
-a = b;
-b = t;
-
-#include<stdio.h>
-
-void swap(int *a, int *b)
-{
-	int t = *a;
-	*a = *b;
-	*b = t;
+student::student(int a,int b, int c){
+	getData(a,b,c);
 }
 
-int main()
-{
-	int x = 20, y = 10;
-	print("%d %d\n",x,y);
-	swap(&x,&y);
-	print("%d %d\n",x,y);
-	return 0;
+student::~student(){
+	cout << t1 << t2 << t3 << "decapitated";
+}
+
+void student::getData(int a, int b, int c){
+	t1 = a; t2 = b; t3 = c;
+}
+
+void student::printData(){
+cout << t1 << t2 << t3;}
+
+void student:add(student a, student b){
+	t1 = a.t1 + b.t1;
+	t2 = a.t2 + b.t2;
+	t3 = a.t3 + b.t3;
+}
+
+int main(){
+	student one(10,20,30), two(20,30,40), sum;
+	sum.add(one,two); 	//10 20 30 decapitated
+						//20 30 40 decapitated
+	sum.printData(); //30 50 70
+	return 0; 	//30 50 70 decapitated
+				//20 30 40 decapitated
+				//10 20 30 decapitated
 }
