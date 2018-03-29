@@ -46,7 +46,7 @@ void student::getData(int a, int b, int c){
 void student::printData(){
 cout << t1 << t2 << t3;}
 
-void student:add(student a, student b){
+void student::add(student a, student b){
 	t1 = a.t1 + b.t1;
 	t2 = a.t2 + b.t2;
 	t3 = a.t3 + b.t3;
